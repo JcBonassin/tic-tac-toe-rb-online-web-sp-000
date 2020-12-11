@@ -125,10 +125,10 @@ def winner(board)
 winner = won?(board)
 if winner != false
   if board[winner[0]] == "O"
-    puts "YAY you won!"
+    #puts "YAY you won!"
     return "O"
   elsif board[winner[0]] == "X"
-    puts "YAY you won!"
+    #puts "YAY you won!"
     return "X"
   end
 end
@@ -139,3 +139,11 @@ def play(board)
     turn(board)
   end
 end
+
+if won?(board)
+    puts "Congratulations #{winner(board)}!"
+  elsif draw?(board)
+    puts "Cats Game!"
+  end
+end
+
