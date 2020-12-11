@@ -132,7 +132,6 @@ if winner != false
     return "X"
   end
 end
-end
 
 def play(board)
   until over?(board) == true
