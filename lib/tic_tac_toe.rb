@@ -121,15 +121,17 @@ else
 end
 end
 
-def winner(board)
-winner = won?(board)
-if winner != false
-  if board[winner[0]] == "O"
-    #puts "YAY you won!"
-    return "O"
-  elsif board[winner[0]] == "X"
-    #puts "YAY you won!"
-    return "X"
+def winner (board)
+  index = []
+  index = won?(board)
+  if index == false
+    return nil
+  else
+    if board[index[0]] == "X"
+      return "X"
+    else
+      return "O"
+    end
   end
 end
 
