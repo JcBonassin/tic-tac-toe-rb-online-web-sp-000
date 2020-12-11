@@ -133,3 +133,8 @@ if winner != false
   end
 end
 end
+
+def play(board)
+  until over?(board) == true
+    turn(board)
+  end
