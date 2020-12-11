@@ -119,7 +119,6 @@ elsif draw?(board)
 else
   return false
 end
-end
 
 def winner (board)
   index = []
