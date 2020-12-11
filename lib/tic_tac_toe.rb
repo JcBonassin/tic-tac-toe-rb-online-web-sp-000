@@ -119,19 +119,19 @@ elsif draw?(board)
 else
   return false
 end
+end
 
-def winner (board)
-  index = []
-  index = won?(board)
-  if index == false
-    return nil
-  else
-    if board[index[0]] == "X"
-      return "X"
-    else
-      return "O"
-    end
+def winner(board)
+winner = won?(board)
+if winner != false
+  if board[winner[0]] == "O"
+    #puts "YAY you won!"
+    return "O"
+  elsif board[winner[0]] == "X"
+    #puts "YAY you won!"
+    return "X"
   end
+end
 end
 
 def play(board)
@@ -141,7 +141,7 @@ def play(board)
 end
 
 if won?(board)
-    puts "hey you won #{winner(board)}!"
+    puts "hey you won #{winner}!"
   elsif draw?(board)
     puts "Cats Game!"
   end
